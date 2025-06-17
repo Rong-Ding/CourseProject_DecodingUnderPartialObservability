@@ -11,8 +11,8 @@ A Python-based project investigating how effectively autoencoders—foundational
   - Analysed latent space dynamics across conditions.
 - Findings:
   - Autoencoders effectively reconstructed full dynamics under **complete observability**.
-  - Under partial conditions, inhibitory interneuron activity was more robustly inferred than excitatory neurons, suggesting asymmetric recoverability depending on network dynamics.
-  - Latent space degraded from **chaotic (rich dynamics)** to **linear (loss of complexity)** with limited input, indicating significant information loss
+  - Under partial conditions, inhibitory interneuron activity was more robustly inferred than excitatory neurons, suggesting **asymmetric recoverability** depending on network dynamics.
+  - Latent space degraded from **chaotic** to **linear** with limited input, indicating significant information loss
   - Results suggest promise for using autoencoders in uncovering hidden neural dynamics, with room for improvement using **deeper or variational architectures**.
 
 
