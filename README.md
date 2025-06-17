@@ -10,9 +10,10 @@ A Python-based project investigating how effectively autoencoders—foundational
   - Measured **Pearson correlation** between predicted and true states.
   - Analysed latent space dynamics across conditions.
 - Findings:
-  - High reconstruction accuracy under full observability; **inhibitory states** were most robust.
-  - Under partial input, **excitatory neurons** were hardest to recover.
-  - Latent space degraded from **chaotic (rich dynamics)** to **linear (loss of complexity)** with less input.
+  - Autoencoders effectively reconstructed full dynamics under **complete observability**.
+  - Under partial conditions, inhibitory interneuron activity was more robustly inferred than excitatory neurons, suggesting asymmetric recoverability depending on network dynamics.
+  - Latent space degraded from **chaotic (rich dynamics)** to **linear (loss of complexity)** with limited input, indicating significant information loss
+  - Results suggest promise for using autoencoders in uncovering hidden neural dynamics, with room for improvement using **deeper or variational architectures**.
 
 
 The repository consists of the Jupyter-Notebook script (**CAS2425_FinalProject_RongDing.ipynb**) and the resulting project report (**Final_Project_RD.pdf**). 
