@@ -1,6 +1,18 @@
-This is a Python-based project, combining cutting-edge AI methods (the Autoencoder architecture) with simulated neurophysiological data, to investigate how effectively Autoencoders reconstruct latent states and system dynamics under varying degrees of (partial) observability.
+## 🧠 Reconstructing Hidden Neural Dynamics with Autoencoders
 
-The current project uses a Jupyter Notebook script, which first simulates oscillatory neurophysiological data and then builds and applies the Autoencoder architecture to uncover and reconstruct latent dynamics. To test the Autoencoder's ability to handle partial observability (e.g., due to missing variables, noise, etc.), I manipulated the total number of dimensions, as well as their categories, available to the Autoencoders. 
-The project resulted in a report for the graduate course Complex Adaptive Systems in the AI master's programme at Radboud University. 
+A Python-based project investigating how effectively autoencoders—foundational deep learning architectures—reconstruct latent states and system dynamics in neurophysiology under varying degrees of partial observability.
+- Training:
+  - Simulated cortical activity using the Jansen-Rit Neural Mass Model with six state variables over 10,000 time steps.
+  - Built a **fully connected autoencoder (128–64–3–64–128)** in PyTorch, trained with **Adam optimiser** over 50 epochs.
+  - Used a **custom MSE loss** to handle partial observability, where input dimensions varied (1–6 states).
+- Testing:
+  - Assessed performance under **three input observability conditions**: All six states (full observability) vs Three membrane potentials only (partial) vs Only pyramidal neuron potential (extreme partial)
+  - Measured **Pearson correlation** between predicted and true states.
+  - Analysed latent space dynamics across conditions.
+- Findings:
+  - High reconstruction accuracy under full observability; **inhibitory states** were most robust.
+  - Under partial input, **excitatory neurons** were hardest to recover.
+  - Latent space degraded from **chaotic (rich dynamics)** to **linear (loss of complexity)** with less input.
+
 
 The repository consists of the Jupyter-Notebook script (**CAS2425_FinalProject_RongDing.ipynb**) and the resulting project report (**Final_Project_RD.pdf**). 
